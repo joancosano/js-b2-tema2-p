@@ -4,7 +4,6 @@
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
-<<<<<<< HEAD
 
 export class Validator{
     #field;
@@ -12,21 +11,10 @@ export class Validator{
     #required;
 
     constructor(fieldName = "",value = "",required = false){
-=======
-export class Validator {
-
-    #field;
-    #value;
-    #required;
-    
-    constructor(fieldName = '',value = '',required = false)
-    {
->>>>>>> refs/remotes/origin/main
         this.#field = fieldName;
         this.#value = value;
         this.#required = required;
     }
-<<<<<<< HEAD
 
     get field(){
         return this.#field
@@ -63,32 +51,3 @@ export class Validator {
     }
 
 }
-=======
-    get field(){
-        return this.#field
-    }
-    set field(name){
-        this.#field = name;
-    }
-    get value(){
-        return this.#value
-    }
-    set value(value){
-        this.#value = value;
-    }
-
-    get required(){
-        return this.#required
-    }
-    set required(required){
-        this.#required = required;
-    }
-    isEmpty(){
-        return this.#value === '';
-    }
-    isValid(){
-        return !this.isEmpty() || !this.required;
-    }
-
-}
->>>>>>> refs/remotes/origin/main
