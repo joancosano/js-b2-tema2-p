@@ -3,7 +3,6 @@
 // Enunciado disponible en u2e1.md / Enunciat disponible a u2e1.md
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
-<<<<<<< HEAD
 import {Validator} from "./u1e1.js"
 
 export class EmailValidator extends Validator{
@@ -28,36 +27,3 @@ export class EmailValidator extends Validator{
             return true
         }
 }
-=======
-
-import {Validator} from "./u1e1"
-
-export class EmailValidator extends Validator {
-  constructor(fieldName = 'none', value = '', required = false) {
-    super(fieldName ?? 'none', value, required);
-}
-
-    checkEmailAddress(){
-    const regex = /^[^@]+@[^@]{2,}\.[^@]{2,}$/;
-    if (regex.test(this.value)){
-        return true;
-    }
-    return `ERROR_EMAIL. ${this.field} NO es una dirección de correo válida.`;
-}
-
-isValid(){
-
-    if (this.required && this.isEmpty()){
-        return `ERROR_REQUIRED. ${this.field} no puede ser vacío si es obligatorio.`
-    } 
-    
-     if (!this.isEmpty()) {
-        const result = this.checkEmailAddress();
-        if (result !== true) {
-            return result;
-        }
-    }
-    return true
-}
-}
->>>>>>> refs/remotes/origin/main
